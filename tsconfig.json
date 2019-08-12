@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "module":"es2015",
+        "target": "es2015",
+        "jsx": "react",
+        "rootDir": "src",
+        //"outDir": "build",---个人建议是 outDir 参数建议不要设置，使用默认值就行，这样每次修改 .ts 文件后就会直接在当前目录下生成同名的 es6语法编译后 .js 文件，当 index.android.js 入口文件加载项目文件时则很方便
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "preserveConstEnums": true,
+        "allowJs": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
+        "moduleResolution":"Node"
+    },
+    "filesGlob": [
+        "typings/index.d.ts",
+        //在项目下新建一个目录"src"，typescripe源代码就放在这里
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "node_modules/typescript/lib/lib.es6.d.ts"
+    ],
+    "types": [
+      "react",
+      "react-dom",
+      "react-native"
+    ],
+    "exclude":[
+        "build", 
+        "node_modules",
+        "jest.config.js",
+        "App.js"
+        
+    ],
+    "compileOnSave": false
+}
